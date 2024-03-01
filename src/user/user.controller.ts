@@ -23,6 +23,8 @@ export class UserController {
     return this.userService.login(loginData, lang);
   }
 
+
+
   @Get(':id')
   getUserById(@Param('id') id: number,) {
     return this.userService.getUserById(id);
