@@ -1,0 +1,10 @@
+{
+  "here": "here-english",
+  "greet": "Dear",
+  "click": "Please click",
+  "greet_hello": "Hello there,",
+  "auth": {
+    "loginSuccess": "Login successful"
+  }
+  
+}
