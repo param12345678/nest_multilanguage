@@ -4,7 +4,18 @@
   "click": "Please click",
   "greet_hello": "Hello there,",
   "auth": {
-    "loginSuccess": "Login successful"
+    "loginSuccess": "Login successful",
+    "emailNotRegistered": "Email not registered",
+    "passwordDoesNotMatch": "Password does not match",
+    "profileUpdated": "Profile updated successfully"
+
+  },
+  "error":{
+    "NOT_FOUND":"Not found"
+  },
+  "user": {
+    "profileUpdated": "Profile updated successfully"
   }
+
   
 }

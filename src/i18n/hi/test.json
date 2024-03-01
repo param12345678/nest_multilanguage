@@ -4,6 +4,16 @@
     "click": "Klik",
     "greet_hello": "Hello there, ",
     "auth": {
-      "loginSuccess": "लॉगिन सफल"
+      "loginSuccess": "लॉगिन सफल",
+      "emailNotRegistered": "ईमेल पंजीकृत नहीं है",
+      "passwordDoesNotMatch": "पासवर्ड मेल नहीं खाता",
+      "profileUpdated": "प्रोफ़ाइल सफलतापूर्वक अपडेट किया गया"
+
+    },
+    "error": {
+      "NOT_FOUND": "खोजा नहीं गया"
+    },
+    "user": {
+      "profileUpdated": "प्रोफ़ाइल सफलतापूर्वक अपडेट किया गया"
     }
   }

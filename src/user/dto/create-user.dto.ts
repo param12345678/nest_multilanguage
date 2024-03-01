@@ -30,6 +30,13 @@ export class CreateUserDto {
     readonly gender: Gender;
 }
 
+export class ProfileDto {
+
+    @ApiProperty() // Add ApiProperty decorator to add Swagger metadata
+    readonly name: string;
+
+}
+
 export class loginDto {
 
 

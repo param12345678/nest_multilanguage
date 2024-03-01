@@ -24,7 +24,9 @@ async function bootstrap() {
     .addTag('Test')
     .addBearerAuth(undefined, 'Authorization')
     .build();
+
   const document = SwaggerModule.createDocument(app, config);
+
   SwaggerModule.setup('api', app, document);
 
   await app.listen(port);
