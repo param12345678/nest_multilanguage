@@ -6,6 +6,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
 import * as path from 'path';
 import { AcceptLanguageResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
+import { AuthModule } from './auth/auth.module';
+import { ResponderService } from './utils/responder';
 
 
 
@@ -26,9 +28,9 @@ import { AcceptLanguageResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
     }),
 
 
-    DatabaseModule, UserModule
+    DatabaseModule, UserModule, AuthModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, ResponderService],
 })
 export class AppModule { }

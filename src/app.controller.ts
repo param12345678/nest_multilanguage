@@ -14,7 +14,7 @@ export class AppController {
 
   @Get('/test')
   async getHello1(): Promise<string> {
-    const message = await this.appService.getMessage('test.auth.loginSuccess', 'en'); // Specify translation key and language code
+    const message = await this.appService.getMessage('test.auth.LOGIN_SUCC', 'en'); // Specify translation key and language code
     return message;
   }
 

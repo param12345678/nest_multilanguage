@@ -5,26 +5,11 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { Headers, extractLanguageFromHeader } from 'src/utils/common';
 import { AuthGuard } from 'src/guards/jwt-auth.guard';
 
-@ApiTags('Auth')
+@ApiTags('User')
 @Headers()
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UsersService,) { }
-
-  @Post('signup')
-  create(@Body() createUserDto: CreateUserDto, @Req() request) {
-    const lang = extractLanguageFromHeader(request); // Use the helper function to extract language
-    return this.userService.createUser(createUserDto, lang);
-  }
-
-
-  @Post('login')
-  login(@Body() loginData: loginDto, @Req() request) {
-    const lang = extractLanguageFromHeader(request); // Use the helper function to extract language
-    return this.userService.login(loginData, lang);
-  }
-
-
 
   @Get(':id')
   getUserById(@Param('id') id: number,) {

@@ -1,13 +1,22 @@
 {
+
+  "Failed": 0,
+  "OK": 1,
+  "Success": "Success",
+
     "here": "लॉगिन सफल",
     "greet": "Beste",
     "click": "Klik",
     "greet_hello": "Hello there, ",
     "auth": {
-      "loginSuccess": "लॉगिन सफल",
-      "emailNotRegistered": "ईमेल पंजीकृत नहीं है",
-      "passwordDoesNotMatch": "पासवर्ड मेल नहीं खाता",
-      "profileUpdated": "प्रोफ़ाइल सफलतापूर्वक अपडेट किया गया"
+      "LOGIN_SUCC": "लॉगिन सफल",
+      "NO_ACCOUNT_FOUND": "ईमेल पंजीकृत नहीं है",
+      "INVALID_ID_PWD": "पासवर्ड मेल नहीं खाता",
+      "profileUpdated": "प्रोफ़ाइल सफलतापूर्वक अपडेट किया गया",
+      "emailAlreadyExists":"ईमेल पहले से मौजूद है, पहले से ही है।",
+      "USER_CREATED_SUCC": "उपयोगकर्ता सफलतापूर्वक बनाया गया"
+
+
 
     },
     "error": {

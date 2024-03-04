@@ -1,13 +1,23 @@
 {
+
+  "Failed": 0,
+  "OK": 1,
+  "Success": "Success",
+
   "here": "here-english",
   "greet": "Dear",
   "click": "Please click",
   "greet_hello": "Hello there,",
   "auth": {
-    "loginSuccess": "Login successful",
-    "emailNotRegistered": "Email not registered",
-    "passwordDoesNotMatch": "Password does not match",
-    "profileUpdated": "Profile updated successfully"
+    "LOGIN_SUCC": "Login successfully.",
+
+    "NO_ACCOUNT_FOUND": "Email not registered",
+    "INVALID_ID_PWD": "Password does not match",
+    "profileUpdated": "Profile updated successfully",
+    "emailAlreadyExists":"emailAlreadyExists is already",
+    "USER_CREATED_SUCC": "User created successfully."
+
+
 
   },
   "error":{
