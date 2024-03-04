@@ -1,5 +1,5 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Req, Put, UseGuards, Res, HttpStatus } from '@nestjs/common';
-import { CreateUserDto, ProfileDto, loginDto } from './dto/create-user.dto';
+import { Controller, Get, Body, Param, Req, Put, UseGuards } from '@nestjs/common';
+import { ProfileDto } from './dto/create-user.dto';
 import { UsersService } from './user.service';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { Headers, extractLanguageFromHeader } from 'src/utils/common';

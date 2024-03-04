@@ -1,38 +1,20 @@
-import { Injectable, Inject, ConflictException, HttpStatus, UnauthorizedException, NotFoundException } from '@nestjs/common';
-import { USER_REPOSITORY } from 'src/constants';
+import { Injectable, ConflictException } from '@nestjs/common';
 import { User } from 'src/models/user.entity';
-import { CreateUserDto, loginDto } from './dto/create-user.dto';
-import * as bcrypt from 'bcrypt';
-import globalMsg from 'src/common/globalMsg';
-import { sign } from 'jsonwebtoken'; // Import sign function from jsonwebtoken
 import { I18nService } from 'nestjs-i18n';
-
-
-
 
 
 @Injectable()
 export class UsersService {
-  constructor(@Inject(USER_REPOSITORY) private readonly userRepository: typeof User,
-    private readonly i18n: I18nService, // Inject I18nService
-
-  ) {
-
-  }
+  constructor(private readonly i18n: I18nService, // Inject I18nService
+  ) { }
 
 
   async updateProfile(userId: number, updateProfileDto: any, lang: string) {
     try {
-      console.log("uesrIddddddddd", userId)
-      const user = await this.userRepository.findByPk(userId);
+      const user = await User.findByPk(userId);
       if (!user) {
         const message = await this.i18n.translate('test.error.NOT_FOUND', { lang });
         return { message, statusCode: 404 };
-      }
-
-      // Update user's profile fields based on DTO
-      if (updateProfileDto.name) {
-        user.name = updateProfileDto.name;
       }
 
       // Update more fields as needed

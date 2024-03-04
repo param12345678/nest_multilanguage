@@ -2,14 +2,12 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
 import * as path from 'path';
 import { AcceptLanguageResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
 import { AuthModule } from './auth/auth.module';
 import { ResponderService } from './utils/responder';
-
-
 
 
 @Module({
@@ -28,7 +26,7 @@ import { ResponderService } from './utils/responder';
     }),
 
 
-    DatabaseModule, UserModule, AuthModule
+    DatabaseModule, UserModule, AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService, ResponderService],
